@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es-CL"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48
+    }
+.texture-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDWQDTEZwj_TA51jWb-QkDcHQ6XZyZocVOuyNwYVGPvh9Z3DwEN0Sq1T9Q6_cP36kAA6Pq6j4Mb3ZYVdBGhVJJZQ5A9_KMmlslENXhiXuGhtkNoOoiz4p8PP-QmFZE5-posfM9iMmlMl1dLXoyIba67jSpQ8EFDn7Bp9HiVc6nUEwabiU9Nm6WG3lyHNCO1NGHkAArhgADXjn4DQ-odBHynFUP18l0gSiV7-VG1VMdfUHEOpCwpHCMwEYU-TEogb1BMpqxgtqh0xwL3);
+    opacity: 0.03
+    }</style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#1c1b1b",
+                        "tertiary": "#000000",
+                        "on-secondary-fixed": "#2a1800",
+                        "secondary": "#7a582b",
+                        "on-primary": "#ffffff",
+                        "surface": "#fbf9f8",
+                        "on-secondary-fixed-variant": "#5f4115",
+                        "surface-container-low": "#f5f3f3",
+                        "background": "#fbf9f8",
+                        "tertiary-fixed": "#fbddca",
+                        "surface-variant": "#e4e2e2",
+                        "secondary-fixed": "#ffddb6",
+                        "on-primary-container": "#858383",
+                        "on-tertiary-container": "#987f6f",
+                        "surface-dim": "#dbd9d9",
+                        "surface-container": "#efeded",
+                        "on-tertiary-fixed-variant": "#574335",
+                        "outline": "#747878",
+                        "surface-tint": "#5f5e5e",
+                        "tertiary-container": "#28180d",
+                        "on-surface": "#1b1c1c",
+                        "secondary-container": "#fecf97",
+                        "inverse-on-surface": "#f2f0f0",
+                        "on-surface-variant": "#444748",
+                        "on-primary-fixed-variant": "#474646",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#eae8e7",
+                        "primary-container": "#1c1b1b",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#e5e2e1",
+                        "primary": "#000000",
+                        "on-secondary-container": "#79572a",
+                        "inverse-surface": "#303030",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c4c7c7",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#ecbf88",
+                        "tertiary-fixed-dim": "#dec1af",
+                        "inverse-primary": "#c8c6c5",
+                        "on-background": "#1b1c1c",
+                        "surface-container-highest": "#e4e2e2",
+                        "surface-bright": "#fbf9f8",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#28180d",
+                        "primary-fixed-dim": "#c8c6c5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "caption": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "0.01em", "fontWeight": "700"}],
+                        "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-10 h-20 bg-zinc-950/95 backdrop-blur-md border-b border-yellow-900/30">
+<div class="text-lg font-black tracking-tighter text-zinc-100 uppercase">
+            STANDARD BARBERÍA EXCLUSIVA
+        </div>
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="font-inter tracking-widest uppercase text-[11px] font-bold text-zinc-400 hover:text-zinc-100 transition-all" href="#servicios">Servicios</a>
+<a class="font-inter tracking-widest uppercase text-[11px] font-bold text-zinc-400 hover:text-zinc-100 transition-all" href="#galeria">Galería</a>
+<a class="font-inter tracking-widest uppercase text-[11px] font-bold text-zinc-400 hover:text-zinc-100 transition-all" href="#resenas">Reseñas</a>
+<a class="font-inter tracking-widest uppercase text-[11px] font-bold text-zinc-400 hover:text-zinc-100 transition-all" href="#contacto">Contacto</a>
+</nav>
+<button class="bg-primary text-on-primary font-label-bold px-6 py-3 border border-secondary hover:bg-secondary transition-all active:scale-95 duration-200">
+            RESERVAR CITA
+        </button>
+</header>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative h-[921px] w-full bg-zinc-950 flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 grayscale brightness-75" data-alt="Moody high-contrast close-up of a master barber detailing a sharp haircut in a dark studio with warm brass lighting accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBadbxVFa15LHfjyXaF0wiQOXwvEJgKlWBw8EbYYk5SGZbBJR7424iAEbXHj5bRIMf9ApapCPjb-WB5nzvTYQ0sn5xsXTn1RehsHNhR4MESRmuntMH7vEacDBSZ0krMCSOnPE_vPovwolFYKG52r4FzQSZobxFeP65t2AXonWVPrFUQAuo0Ye2idKKKUIkx-Z0JaBibP7DD6ItWTZ4NUtxs5D2OmgHr2N3-B70YgOCaIAQi1p2X0-c_GazGh4yqnmo8oaZTrmhPOQL7"/>
+<div class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full">
+<div class="max-w-2xl">
+<span class="text-secondary font-label-bold uppercase tracking-[0.3em] mb-4 block">PUENTE ALTO, CHILE</span>
+<h1 class="font-display text-display text-on-primary mb-8 leading-tight">
+                        El Estándar de <br/><span class="text-secondary">Excelencia</span> en Barbería
+                    </h1>
+<p class="text-zinc-400 font-body-lg mb-10 max-w-lg">
+                        Combinamos técnicas clásicas de navaja con tendencias modernas para ofrecer el corte que define tu identidad.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-on-primary text-primary font-label-bold px-10 py-5 hover:bg-secondary hover:text-on-primary transition-all duration-300">
+                            AGENDAR MI CITA
+                        </button>
+<button class="border border-zinc-700 text-on-primary font-label-bold px-10 py-5 hover:border-secondary transition-all duration-300 backdrop-blur-sm">
+                            VER SERVICIOS
+                        </button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-10 hidden md:flex flex-col gap-2">
+<div class="w-1 h-20 bg-zinc-800 relative">
+<div class="absolute top-0 left-0 w-full h-1/2 bg-secondary"></div>
+</div>
+<span class="text-zinc-500 font-caption [writing-mode:vertical-lr] rotate-180 uppercase tracking-widest">SCROLL</span>
+</div>
+</section>
+<!-- Sobre Nosotros -->
+<section class="py-section-gap bg-surface">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="aspect-[4/5] bg-zinc-900 border-l-[12px] border-secondary overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" data-alt="Professional barber hands using vintage chrome scissors and fine comb on dark hair with dramatic industrial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFUAuvYThzneiiXpQVY26N8KeISIV0vv3ZsOnzYoKq56XPOPHeey6mWN22RKiAh_W0aVsBVcOriauQBZ2jOUn2SWfCUlCJlL_Mk9gmRyz47c0pyaG5dZcpdODVnhkvJRKo465Cw7gzanXo9DeNlYAgYa9S0gOxoR2AKowT0opM__7tX7i31SyMKJRLaP16cSjAkiu6uDL5jqgo5bSHOWivLWlXa6pbAOo6rPWEtGkngbdF37zlv75wqTG-oZgsFhbmqWoVqD3FIXBo"/>
+</div>
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-zinc-950 p-6 flex flex-col justify-center items-center text-center hidden md:flex">
+<span class="text-secondary text-4xl font-display">10+</span>
+<span class="text-zinc-400 text-caption uppercase tracking-tighter">Años de Maestría</span>
+</div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-8 uppercase border-b-2 border-secondary inline-block pb-2">Precisión y Paciencia</h2>
+<p class="font-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                            En STANDARD, entendemos que una barba perfecta o un degrade milimétrico no se logran con prisa. Nuestro equipo domina el arte de la <span class="text-primary font-bold">tijera y la navaja tradicional</span>, transformando cada visita en un ritual de cuidado personal.
+                        </p>
+<p class="font-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                            Nos especializamos en el trato con los más pequeños. Nuestra <span class="text-secondary font-bold">paciencia infinita con niños</span> asegura que ellos también disfruten de una experiencia exclusiva, sin estrés y con resultados impecables.
+                        </p>
+<div class="grid grid-cols-2 gap-4 border-t border-surface-variant pt-8">
+<div>
+<span class="material-symbols-outlined text-secondary text-3xl mb-2">content_cut</span>
+<h4 class="font-label-bold text-primary">TÉCNICA PURA</h4>
+</div>
+<div>
+<span class="material-symbols-outlined text-secondary text-3xl mb-2">child_care</span>
+<h4 class="font-label-bold text-primary">CORTE NIÑOS</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Servicios -->
+<section class="py-section-gap bg-zinc-950 relative overflow-hidden" id="servicios">
+<div class="texture-overlay absolute inset-0 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-4 uppercase tracking-tighter">Menú de Especialidades</h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service 1 -->
+<div class="group bg-zinc-900/50 p-8 border border-zinc-800 hover:border-secondary transition-all duration-300">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block" data-icon="content_cut">content_cut</span>
+<h3 class="font-headline-md text-on-primary mb-4 uppercase">Corte de Cabello</h3>
+<p class="text-zinc-500 font-body-md mb-8">
+                            Análisis morfológico, lavado premium y peinado con productos de alta gama.
+                        </p>
+<div class="w-full h-px bg-zinc-800 group-hover:bg-secondary transition-colors"></div>
+</div>
+<!-- Service 2 -->
+<div class="group bg-zinc-900/50 p-8 border border-zinc-800 hover:border-secondary transition-all duration-300">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block" data-icon="face">face</span>
+<h3 class="font-headline-md text-on-primary mb-4 uppercase">Barba Profesional</h3>
+<p class="text-zinc-500 font-body-md mb-8">
+                            Ritual de toalla caliente, perfilado a navaja y aceites esenciales hidratantes.
+                        </p>
+<div class="w-full h-px bg-zinc-800 group-hover:bg-secondary transition-colors"></div>
+</div>
+<!-- Service 3 -->
+<div class="group bg-zinc-900/50 p-8 border border-zinc-800 hover:border-secondary transition-all duration-300">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block" data-icon="brush">brush</span>
+<h3 class="font-headline-md text-on-primary mb-4 uppercase">Perfilado Cejas</h3>
+<p class="text-zinc-500 font-body-md mb-8">
+                            Definición técnica para potenciar la mirada manteniendo la naturalidad masculina.
+                        </p>
+<div class="w-full h-px bg-zinc-800 group-hover:bg-secondary transition-colors"></div>
+</div>
+<!-- Service 4 -->
+<div class="group bg-zinc-900/50 p-8 border border-zinc-800 hover:border-secondary transition-all duration-300">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block" data-icon="child_friendly">child_friendly</span>
+<h3 class="font-headline-md text-on-primary mb-4 uppercase">Corte Niño</h3>
+<p class="text-zinc-500 font-body-md mb-8">
+                            Experiencia lúdica y paciente. Estilo impecable para los pequeños caballeros.
+                        </p>
+<div class="w-full h-px bg-zinc-800 group-hover:bg-secondary transition-colors"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Galería (Bento Grid) -->
+<section class="py-section-gap bg-surface" id="galeria">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<span class="text-secondary font-label-bold uppercase tracking-widest mb-2 block">Portafolio</span>
+<h2 class="font-headline-lg text-headline-lg uppercase">El Arte de la Precisión</h2>
+</div>
+<p class="text-on-surface-variant max-w-sm text-right font-body-md">
+                        Resultados reales de clientes que confían en el estándar de excelencia.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[800px]">
+<div class="md:col-span-2 md:row-span-2 relative overflow-hidden bg-zinc-200">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Modern high-end barber chair in front of a large mirror in a clean industrial studio with minimalist concrete walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsYT9Cc6wTpbvPr9N18t5KxyMRJAc7XpA3RLbMQqEKnJRxGSQq9ZN_U-_pnpfA24hHFzO3qDlm4JcIOnbXpfBXlfILOTq50VTTF7OoDE-OQPIjsOln6AuhlUXZqy2F-sfgXk7cD2_ZAN5i8alKKHaTUr5lbu1OeHOSMGQyv-UrrVeM2qOJT6M8XXo-2dteKvD3SP_Cmv7v0Eh00Ufe6_NseehsCtDxD16jHJQuHY9mS8AniUplsgWDG4w9RgejchmesHSeVK_h1TVW"/>
+</div>
+<div class="md:col-span-2 relative overflow-hidden bg-zinc-300">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Detailed close-up of a sharp fade haircut with a clean line-up on a male client, professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnypbbKRyIUZyQijRCENKHPh1H7IFUJSfqeI8niCtFf_XS5M7I8fFgknS8MGXR5FKxExKVFCIrAbMQ7nZ_Vp_sE_Td8Uj5r06I-g_3-iMbPtOSob5q-ANbLgiOleXVROxYeyjlQE6Z61_sMB0T6d8-TWLaivlrgf_ox6idtXg5egKevPSqYL62IXq8gLe9QBo_OEU4lNcIv2DhGJfLxt5SRl2S6Qo4Ga4XeMZ8PDnauLn79ssFaAhi5S0teQmOuWRp06L4gl9vGLdY"/>
+</div>
+<div class="relative overflow-hidden bg-zinc-400">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Barber grooming a beard with a straight razor, thick white foam, vintage atmosphere, focus on the blade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfC5wRji0ihcLZ5DnPZnh1ecFgeadOnr_XauIG1Gg7heGUvq_gQbazVci9xpUf3xvz34C9_fhcKTC5OdBhPnav2JCa3iiuF9H_RoqS_sEidUxFQ_r9i8EH-zaUxFbXpqkIrnKy2AVHXGyUQoHepB1HV4WM92enXxPMt00rsdnEgVUbZWAOOz6p3TcTrNBXQlkzlrqBFnq47dbcTJE0g6zQf6MWFbq1o3yStzEXOD6OfIq2LgyPJ5TuBMHVm16L53fow9gTRpiocKPe"/>
+</div>
+<div class="relative overflow-hidden bg-zinc-500">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Set of professional barber tools including chrome shears, electric clippers, and wooden brushes on a dark surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnkKBBhNONc7rmIGfbgUHIJjLDlrlpTTXIf1_oyRA71p6K_1R3Hkz3tvVK-2ISnKig6Ygn57niSPgZyGdwYqtI53D3UgcvV5V3FV0X2Jnrg2Km58tMhZtlTuYLf9v0VZU9uloRXRw51c7P_RxXvOv75w4mfnOsmF-p2hAW9ZBrbkhDYPMueKQXdF4QZkIbIKv3hVex9j-kds83q_EeprpJ3QNsjMmh5mkfLAlW1es4vedI68BOhJ6z_hYL_VLstVbTHSJOrd4YFO_v"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Reseñas -->
+<section class="py-section-gap bg-surface-container overflow-hidden" id="resenas">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="flex items-center gap-4 mb-12">
+<h2 class="font-headline-lg text-headline-lg uppercase">Lo Que Dicen Nuestros Clientes</h2>
+<div class="flex items-center gap-1 bg-secondary px-3 py-1 text-on-primary">
+<span class="font-bold">4.8</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest p-8 border-b-4 border-secondary shadow-sm">
+<div class="flex gap-1 text-secondary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic mb-8">
+                            "La mejor atención en Puente Alto. Llevé a mi hijo de 4 años que odiaba cortarse el pelo y el barbero tuvo una paciencia increíble. El resultado fue un 10/10."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-px bg-zinc-300"></div>
+<span class="font-label-bold text-primary">RICARDO SOTO</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest p-8 border-b-4 border-secondary shadow-sm">
+<div class="flex gap-1 text-secondary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic mb-8">
+                            "El nivel de detalle con la navaja es de otro mundo. Se nota el profesionalismo y la higiene del lugar. Es realmente una barbería de clase mundial en el sector."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-px bg-zinc-300"></div>
+<span class="font-label-bold text-primary">CRISTIÁN VERA</span>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-lowest p-8 border-b-4 border-secondary shadow-sm">
+<div class="flex gap-1 text-secondary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic mb-8">
+                            "Ambiente agradable, música impecable y el perfilado de barba que me hicieron fue perfecto. Se toman el tiempo necesario para cada detalle."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-px bg-zinc-300"></div>
+<span class="font-label-bold text-primary">MIGUEL ÁNGEL</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contacto -->
+<section class="py-section-gap bg-background" id="contacto">
+<div class="max-w-7xl mx-auto px-6 md:px-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div>
+<h2 class="font-headline-lg text-headline-lg uppercase mb-12">Donde Puedes Encontrarnos</h2>
+<div class="space-y-8 mb-12">
+<div class="flex gap-6 items-start">
+<span class="material-symbols-outlined text-secondary text-2xl">location_on</span>
+<div>
+<h4 class="font-label-bold text-primary mb-2">DIRECCIÓN</h4>
+<p class="text-on-surface-variant">Av. El Peral 3642, Puente Alto, Región Metropolitana</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<span class="material-symbols-outlined text-secondary text-2xl">schedule</span>
+<div>
+<h4 class="font-label-bold text-primary mb-2">HORARIOS</h4>
+<p class="text-on-surface-variant">Lunes a Sábado: 10:00 - 20:00<br/>Domingos: Cerrado</p>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-4">
+<a class="flex items-center gap-3 bg-zinc-950 text-on-primary px-8 py-4 font-label-bold hover:bg-secondary transition-all" href="#">
+<span class="material-symbols-outlined">message</span>
+                                WHATSAPP
+                            </a>
+<a class="flex items-center gap-3 border border-zinc-300 text-primary px-8 py-4 font-label-bold hover:border-secondary transition-all" href="#">
+<span class="material-symbols-outlined">camera_alt</span>
+                                INSTAGRAM
+                            </a>
+</div>
+</div>
+<div class="h-[400px] bg-zinc-200 overflow-hidden relative border border-zinc-300">
+<img class="w-full h-full object-cover" data-alt="Interior of the exclusive barbershop showing a classic barber chair and large mirror" src="https://lh3.googleusercontent.com/aida/ADBb0ui06bfNvTJ6BwhDrAXezWGY4cubw1aBl7-ukrN9Od-AQ8rkBC0fkIJlOGC2uFuU7wv_WMw1yhWHdfQSGB82WoOmMWXOCccr-BYc53qAZvUbDTuVap_TSBCKwMWE8rus5Ej9wBYBvFQmvlUY8okFHwclJQ04EkB2RIezzTvQBcMTY9PkxcRx0fUGS5Y4SOcwiyU9hxwjO9urXsCNkCtNMNPpAfhRzX-FiGctKo33Q8RXYyrGfrTNRhSDYwrtGUA6rvp5pldywBJmgcM"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-4 md:px-10 flex flex-col md:flex-row justify-between items-center gap-6 bg-zinc-950 border-t border-zinc-900">
+<div class="text-md font-bold text-zinc-200 uppercase">
+            STANDARD BARBERÍA EXCLUSIVA
+        </div>
+<p class="font-inter text-xs tracking-tight text-zinc-500 uppercase text-center md:text-left">
+            © 2024 STANDARD BARBERÍA EXCLUSIVA. EL ARTE DE LA PRECISIÓN.
+        </p>
+<div class="flex gap-6">
+<a class="font-inter text-xs tracking-tight text-zinc-600 hover:text-yellow-500 transition-colors uppercase" href="#">Instagram</a>
+<a class="font-inter text-xs tracking-tight text-zinc-600 hover:text-yellow-500 transition-colors uppercase" href="#">WhatsApp</a>
+<a class="font-inter text-xs tracking-tight text-zinc-600 hover:text-yellow-500 transition-colors uppercase" href="#">Ubicación</a>
+<a class="font-inter text-xs tracking-tight text-zinc-600 hover:text-yellow-500 transition-colors uppercase" href="#">Términos</a>
+</div>
+</footer>
+</body></html>
