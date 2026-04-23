@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STANDARD Barbería Exclusiva</title>
+    
+    <!-- Fuentes y Iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header slide-down">
+        <div class="header__logo text-glow">STANDARD BARBERÍA EXCLUSIVA</div>
+        <nav class="header__nav">
+            <a href="#servicios" class="nav-link">Servicios</a>
+            <a href="#galeria" class="nav-link">Galería</a>
+            <a href="#resenas" class="nav-link">Reseñas</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </nav>
+        <button class="btn btn--primary">RESERVAR CITA</button>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero fade-in">
+            <div class="hero__bg">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBadbxVFa15LHfjyXaF0wiQOXwvEJgKlWBw8EbYYk5SGZbBJR7424iAEbXHj5bRIMf9ApapCPjb-WB5nzvTYQ0sn5xsXTn1RehsHNhR4MESRmuntMH7vEacDBSZ0krMCSOnPE_vPovwolFYKG52r4FzQSZobxFeP65t2AXonWVPrFUQAuo0Ye2idKKKUIkx-Z0JaBibP7DD6ItWTZ4NUtxs5D2OmgHr2N3-B70YgOCaIAQi1p2X0-c_GazGh4yqnmo8oaZTrmhPOQL7" alt="Moody high-contrast close-up of a master barber" class="hero__image">
+                <div class="hero__overlay"></div>
+            </div>
+            
+            <div class="container hero__content">
+                <span class="eyebrow">PUENTE ALTO, CHILE</span>
+                <h1 class="hero__title text-glow-light">
+                    El Estándar de <br><span class="text-accent text-glow">Excelencia</span> en Barbería
+                </h1>
+                <p class="hero__description">
+                    Combinamos técnicas clásicas de navaja con tendencias modernas para ofrecer el corte que define tu identidad.
+                </p>
+                <div class="hero__actions">
+                    <button class="btn btn--solid">AGENDAR MI CITA</button>
+                    <button class="btn btn--outline">VER SERVICIOS</button>
+                </div>
+            </div>
+
+            <div class="hero__scroll-indicator">
+                <div class="scroll-line">
+                    <div class="scroll-line-fill"></div>
+                </div>
+                <span class="scroll-text">SCROLL</span>
+            </div>
+        </section>
+
+        <!-- Sobre Nosotros -->
+        <section class="about section bg-light fade-in">
+            <div class="container grid-2-col">
+                <div class="about__image-wrapper slide-up">
+                    <img src="assets/precision_y_tecnica.jpeg" alt="Precisión y Técnica" class="about__image">
+                    <div class="badge">
+                        <span class="badge__number">10+</span>
+                        <span class="badge__text">Años de Maestría</span>
+                    </div>
+                </div>
+                
+                <div class="about__text slide-up delay-1">
+                    <h2 class="section-title">Precisión y Técnica</h2>
+                    <p class="text-body">
+                        En STANDARD, entendemos que una barba perfecta o un degrade milimétrico no se logran con prisa. Nuestro equipo domina el arte de la <span class="text-bold">tijera y la navaja tradicional</span>, transformando cada visita en un ritual de cuidado personal.
+                    </p>
+                    <p class="text-body">
+                        Nos especializamos en el trato con los más pequeños. Nuestra <span class="text-accent-bold">paciencia infinita con niños</span> asegura que ellos también disfruten de una experiencia exclusiva, sin estrés y con resultados impecables.
+                    </p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <span class="material-symbols-outlined icon">content_cut</span>
+                            <h4 class="feature__title">TÉCNICA PURA</h4>
+                        </div>
+                        <div class="feature">
+                            <span class="material-symbols-outlined icon">child_care</span>
+                            <h4 class="feature__title">CORTE NIÑOS</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios -->
+        <section id="servicios" class="services section bg-dark fade-in">
+            <div class="texture-overlay"></div>
+            <div class="container text-center relative-z">
+                <h2 class="section-title text-light">Menú de Especialidades</h2>
+                
+                <div class="services-grid">
+                    <div class="service-card slide-up">
+                        <span class="material-symbols-outlined service__icon">content_cut</span>
+                        <h3 class="service__title">Corte de Cabello</h3>
+                        <p class="service__desc">Análisis morfológico, lavado premium y peinado con productos de alta gama.</p>
+                        <div class="service__line"></div>
+                    </div>
+                    
+                    <div class="service-card slide-up delay-1">
+                        <span class="material-symbols-outlined service__icon">face</span>
+                        <h3 class="service__title">Barba Profesional</h3>
+                        <p class="service__desc">Ritual de toalla caliente, perfilado a navaja y aceites esenciales hidratantes.</p>
+                        <div class="service__line"></div>
+                    </div>
+                    
+                    <div class="service-card slide-up delay-2">
+                        <span class="material-symbols-outlined service__icon">brush</span>
+                        <h3 class="service__title">Perfilado Cejas</h3>
+                        <p class="service__desc">Definición técnica para potenciar la mirada manteniendo la naturalidad masculina.</p>
+                        <div class="service__line"></div>
+                    </div>
+                    
+                    <div class="service-card slide-up delay-3">
+                        <span class="material-symbols-outlined service__icon">child_friendly</span>
+                        <h3 class="service__title">Corte Niño</h3>
+                        <p class="service__desc">Experiencia lúdica y paciente. Estilo impecable para los pequeños caballeros.</p>
+                        <div class="service__line"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería -->
+        <section id="galeria" class="gallery section bg-light fade-in">
+            <div class="container">
+                <div class="gallery__header slide-up">
+                    <div>
+                        <span class="eyebrow eyebrow--accent">Portafolio</span>
+                        <h2 class="section-title section-title--no-border">El Arte de la Precisión</h2>
+                    </div>
+                    <p class="gallery__desc text-body">
+                        Resultados reales de clientes que confían en el estándar de excelencia.
+                    </p>
+                </div>
+                
+                <div class="bento-grid">
+                    <div class="bento-item item-large slide-up">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsYT9Cc6wTpbvPr9N18t5KxyMRJAc7XpA3RLbMQqEKnJRxGSQq9ZN_U-_pnpfA24hHFzO3qDlm4JcIOnbXpfBXlfILOTq50VTTF7OoDE-OQPIjsOln6AuhlUXZqy2F-sfgXk7cD2_ZAN5i8alKKHaTUr5lbu1OeHOSMGQyv-UrrVeM2qOJT6M8XXo-2dteKvD3SP_Cmv7v0Eh00Ufe6_NseehsCtDxD16jHJQuHY9mS8AniUplsgWDG4w9RgejchmesHSeVK_h1TVW" alt="Barber chair">
+                    </div>
+                    <div class="bento-item item-wide slide-up delay-1">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnypbbKRyIUZyQijRCENKHPh1H7IFUJSfqeI8niCtFf_XS5M7I8fFgknS8MGXR5FKxExKVFCIrAbMQ7nZ_Vp_sE_Td8Uj5r06I-g_3-iMbPtOSob5q-ANbLgiOleXVROxYeyjlQE6Z61_sMB0T6d8-TWLaivlrgf_ox6idtXg5egKevPSqYL62IXq8gLe9QBo_OEU4lNcIv2DhGJfLxt5SRl2S6Qo4Ga4XeMZ8PDnauLn79ssFaAhi5S0teQmOuWRp06L4gl9vGLdY" alt="Sharp fade haircut">
+                    </div>
+                    <div class="bento-item item-small slide-up delay-2">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfC5wRji0ihcLZ5DnPZnh1ecFgeadOnr_XauIG1Gg7heGUvq_gQbazVci9xpUf3xvz34C9_fhcKTC5OdBhPnav2JCa3iiuF9H_RoqS_sEidUxFQ_r9i8EH-zaUxFbXpqkIrnKy2AVHXGyUQoHepB1HV4WM92enXxPMt00rsdnEgVUbZWAOOz6p3TcTrNBXQlkzlrqBFnq47dbcTJE0g6zQf6MWFbq1o3yStzEXOD6OfIq2LgyPJ5TuBMHVm16L53fow9gTRpiocKPe" alt="Barber grooming a beard">
+                    </div>
+                    <div class="bento-item item-small slide-up delay-3">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnkKBBhNONc7rmIGfbgUHIJjLDlrlpTTXIf1_oyRA71p6K_1R3Hkz3tvVK-2ISnKig6Ygn57niSPgZyGdwYqtI53D3UgcvV5V3FV0X2Jnrg2Km58tMhZtlTuYLf9v0VZU9uloRXRw51c7P_RxXvOv75w4mfnOsmF-p2hAW9ZBrbkhDYPMueKQXdF4QZkIbIKv3hVex9j-kds83q_EeprpJ3QNsjMmh5mkfLAlW1es4vedI68BOhJ6z_hYL_VLstVbTHSJOrd4YFO_v" alt="Barber tools">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reseñas -->
+        <section id="resenas" class="reviews section bg-lighter fade-in">
+            <div class="container">
+                <div class="reviews__header slide-up">
+                    <h2 class="section-title section-title--no-border">Lo Que Dicen Nuestros Clientes</h2>
+                    <div class="rating-badge">
+                        <span class="rating-badge__number">4.8</span>
+                        <span class="material-symbols-outlined icon-star">star</span>
+                    </div>
+                </div>
+                
+                <div class="reviews-grid">
+                    <div class="review-card slide-up">
+                        <div class="stars">
+                            <span class="material-symbols-outlined icon-star">star</span>
+                            <span class="material-symbols-outlined icon-star">star</span>
+                            <span class="material-symbols-outlined icon-star">star</span>
+                            <span class="material-symbols-outlined icon-star">star</span>
+                            <span class="material-symbols-outlined icon-star">star</span>
+                        </div>
+                        <p class="review__text">
+                            "La mejor atención en Puente Alto. Llevé a mi hijo de 4 años que odiaba cortarse el pelo y el barbero tuvo una paciencia increíble. El resultado fue un 10/10."
+                        </p>
+                        <div class="review__author">
+                            <div class="author-line"></div>
+                            <span class="author-name">RICARDO SOTO</span>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card slide-up delay-1">
+                        <div class="stars">
+                            <span class="material-symbols-outlined icon-star">star</span>
+                            <span class="material-symbols-outlined icon-star">star</span>
+                            <span class="material-symbols-outlined icon-star">star</span>
+                            <span class="material-symbols-outlined icon-star">star</span>
+                            <span class="material-symbols-outlined icon-star">star_half</span>
+                        </div>
+                        <p class="review__text">
+                            "El nivel de detalle con la navaja es de otro mundo. Se nota el profesionalismo y la higiene del lugar. Es realmente una barbería de clase mundial en el sector."
+                        </p>
+                        <div class="review__author">
+                            <div class="author-line"></div>
+                            <span class="author-name">CRISTIÁN VERA</span>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card slide-up delay-2">
+                        <div class="stars">
+                            <span class="material-symbols-outlined icon-star">star</span>
+                            <span class="material-symbols-outlined icon-star">star</span>
+                            <span class="material-symbols-outlined icon-star">star</span>
+                            <span class="material-symbols-outlined icon-star">star</span>
+                            <span class="material-symbols-outlined icon-star">star</span>
+                        </div>
+                        <p class="review__text">
+                            "Ambiente agradable, música impecable y el perfilado de barba que me hicieron fue perfecto. Se toman el tiempo necesario para cada detalle."
+                        </p>
+                        <div class="review__author">
+                            <div class="author-line"></div>
+                            <span class="author-name">MIGUEL ÁNGEL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="contact section bg-light fade-in">
+            <div class="container grid-2-col">
+                <div class="contact__info slide-up">
+                    <h2 class="section-title section-title--no-border">Donde Puedes Encontrarnos</h2>
+                    
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="material-symbols-outlined icon-contact">location_on</span>
+                            <div>
+                                <h4 class="info__title">DIRECCIÓN</h4>
+                                <p class="info__desc">Av. El Peral 3642, Puente Alto, Región Metropolitana</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="material-symbols-outlined icon-contact">schedule</span>
+                            <div>
+                                <h4 class="info__title">HORARIOS</h4>
+                                <p class="info__desc">Lunes a Sábado: 10:00 - 20:00<br>Domingos: Cerrado</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__actions">
+                        <a href="#" class="btn btn--solid-dark">
+                            <span class="material-symbols-outlined">message</span>
+                            WHATSAPP
+                        </a>
+                        <a href="#" class="btn btn--outline-dark">
+                            <span class="material-symbols-outlined">camera_alt</span>
+                            INSTAGRAM
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact__image slide-up delay-1">
+                    <img src="assets/mapa_puente_alto.png" alt="Mapa de Puente Alto">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer fade-in">
+        <div class="footer__logo text-glow">STANDARD BARBERÍA EXCLUSIVA</div>
+        <p class="footer__copyright">
+            © 2024 STANDARD BARBERÍA EXCLUSIVA. EL ARTE DE LA PRECISIÓN.
+        </p>
+        <div class="footer__links">
+            <a href="#">Instagram</a>
+            <a href="#">WhatsApp</a>
+            <a href="#">Ubicación</a>
+            <a href="#">Términos</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
